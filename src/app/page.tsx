@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import {
   Card,
@@ -19,66 +20,24 @@ import {
   Code,
   Link as LinkIcon,
   ChevronRight,
+  Facebook,
 } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { 
+  greeting, 
+  socialMediaLinks, 
+  skills,
+  skillsData,
+  educationInfo, 
+  workExperiences,
+  bigProjects,
+  contactInfo
+} from "@/lib/portfolio-data";
 
 export default function Home() {
-  const projects = [
-    {
-      title: "Project Alpha",
-      description: "A full-stack web application for project management, built with Next.js, TypeScript, and a serverless backend. Features real-time collaboration.",
-      image: "https://placehold.co/600x400.png",
-      aiHint: "technology abstract",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Project Beta",
-      description: "An innovative e-commerce platform with a focus on user experience and performance. Includes a custom checkout flow and admin dashboard.",
-      image: "https://placehold.co/600x400.png",
-      aiHint: "online shopping",
-      tags: ["React", "Node.js", "GraphQL", "PostgreSQL"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Project Gamma",
-      description: "A mobile-first social media application that connects users through shared interests. Developed using React Native and a Go-based API.",
-      image: "https://placehold.co/600x400.png",
-      aiHint: "social media",
-      tags: ["React Native", "Go", "MongoDB"],
-      github: "#",
-      live: "#",
-    },
-  ];
 
-  const experience = [
-    {
-      role: "Senior Software Engineer",
-      company: "Tech Solutions Inc.",
-      period: "2020 - Present",
-      description: "Leading the development of core features for our flagship product. Mentoring junior developers and improving our CI/CD pipeline.",
-      icon: Briefcase,
-    },
-    {
-      role: "Software Developer",
-      company: "Innovate Co.",
-      period: "2018 - 2020",
-      description: "Developed and maintained client-side applications using React and Redux. Collaborated with UI/UX designers to create responsive and intuitive interfaces.",
-      icon: Briefcase,
-    },
-    {
-      role: "B.S. in Computer Science",
-      company: "State University",
-      period: "2014 - 2018",
-      description: "Graduated with honors. Focused on algorithms, data structures, and artificial intelligence.",
-      icon: GraduationCap,
-    },
-  ];
-
-  const skills = ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "GraphQL", "SQL", "Docker", "AWS", "Go"];
+  const allExperience = [...workExperiences, ...educationInfo];
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -88,13 +47,13 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-3xl space-y-4">
               <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                Alex Doe
+                {greeting.username}
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                Creative Full-Stack Developer
+                {greeting.title}
               </h2>
               <p className="text-muted-foreground md:text-xl">
-                I build beautiful, performant, and accessible digital experiences. From concept to deployment, I love turning complex problems into elegant solutions.
+                {greeting.subTitle}
               </p>
               <div className="flex justify-center gap-4">
                 <Button asChild size="lg">
@@ -121,21 +80,23 @@ export default function Home() {
               <div className="lg:col-span-1 flex flex-col items-center text-center lg:items-start lg:text-left">
                 <Image
                   src="https://placehold.co/400x400.png"
-                  alt="Alex Doe"
+                  alt={greeting.username}
                   width={200}
                   height={200}
                   className="rounded-full border-4 border-primary shadow-lg mb-6"
                   data-ai-hint="professional portrait"
                 />
-                <p className="text-muted-foreground">
-                  A passionate developer with a knack for crafting robust and scalable web applications. I thrive in collaborative environments and am always eager to learn new technologies.
-                </p>
+                <div className="text-muted-foreground space-y-2">
+                  {skillsData.map((skill, index) => (
+                    <p key={index}>{skill}</p>
+                  ))}
+                </div>
               </div>
               <div className="lg:col-span-2 space-y-8">
                 <div>
-                    <h3 className="text-2xl font-semibold mb-4 flex items-center"><Briefcase className="mr-3 h-6 w-6 text-primary" />Experience</h3>
+                    <h3 className="text-2xl font-semibold mb-4 flex items-center"><Briefcase className="mr-3 h-6 w-6 text-primary" />Experience & Education</h3>
                     <div className="relative space-y-6 before:absolute before:left-[11px] before:top-0 before:h-full before:w-0.5 before:bg-border">
-                        {experience.map((exp, index) => (
+                        {allExperience.map((exp, index) => (
                           <div key={index} className="relative pl-8">
                               <div className="absolute left-0 top-0.5 h-6 w-6 rounded-full bg-primary border-4 border-secondary flex items-center justify-center">
                                   <exp.icon className="h-3 w-3 text-primary-foreground" />
@@ -166,7 +127,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter md:text-4xl font-headline">My Portfolio</h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project, index) => (
+              {bigProjects.map((project, index) => (
                 <Card key={index} className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-primary/20">
                   <CardHeader>
                     <div className="aspect-video overflow-hidden rounded-md mb-4">
@@ -208,19 +169,19 @@ export default function Home() {
         <section id="contact" className="w-full py-16 md:py-24 bg-secondary">
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-xl text-center">
-              <h2 className="mb-4 text-3xl font-bold tracking-tighter md:text-4xl font-headline">Get In Touch</h2>
+              <h2 className="mb-4 text-3xl font-bold tracking-tighter md:text-4xl font-headline">{contactInfo.title}</h2>
               <p className="mb-8 text-muted-foreground">
-                Have a project in mind or just want to say hello? My inbox is always open.
+                {contactInfo.subtitle}
               </p>
               <Button asChild size="lg" className="mb-8">
-                <a href="mailto:hello@alexdoe.com">
+                <a href={`mailto:${contactInfo.email_address}`}>
                   <Mail className="mr-2 h-5 w-5" /> Say Hello
                 </a>
               </Button>
               <div className="flex justify-center gap-6">
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary"><Github className="h-7 w-7" /></a>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary"><Linkedin className="h-7 w-7" /></a>
-                <a href="#" className="text-muted-foreground transition-colors hover:text-primary"><Twitter className="h-7 w-7" /></a>
+                <a href={socialMediaLinks.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary"><Github className="h-7 w-7" /></a>
+                <a href={socialMediaLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary"><Linkedin className="h-7 w-7" /></a>
+                <a href={socialMediaLinks.facebook} target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary"><Facebook className="h-7 w-7" /></a>
               </div>
             </div>
           </div>
