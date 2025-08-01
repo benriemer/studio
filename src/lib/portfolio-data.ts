@@ -7,7 +7,7 @@ import {
 export const greeting = {
     username: 'Benjamin Riemer',
     title: 'Hi all, I\'m Benjamin',
-    subTitle: 'Self-motivated 🚀🚀🚀 Web Developer adds high level of experience over more than 10 years collaborating and working on multiple web-based projects. Passionate, hardworking coder with penchant for developing customized interfaces that factor in unique demands for accessibility, reachability and security.',
+    subTitle: 'Complex problem-solver with analytical and driven mindset. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code.',
   };
   
   export const socialMediaLinks = {
@@ -17,88 +17,59 @@ export const greeting = {
     facebook: "https://www.facebook.com/benjamin.riemer.9480/",
   };
   
-  export const skills = ["HTML5", "CSS3", "Sass", "JavaScript", "React", "Node.js", "Angular", "Git", "NoSQL", "Docker"];
+  export const skills = ["JavaScript", "Node.js", "React", "GraphQL", "MySQL", "NoSQL", "AWS", "Docker", "Kubernetes", "Bash Scripting", "Git"];
 
   export const skillsData = [
       '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications',
-      '⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks',
-      '⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean'
+      '⚡ Build and release AI coding assistants for VSCode and JetBrains',
+      '⚡ Design and implement fully automated CI/CD pipelines using GitLab'
   ];
   
-  export const educationInfo = [
-      {
-        role: 'IHK Abschluss: Versicherungsfachmann',
-        company: 'IHK Hamburg',
-        period: '2010 - 2010',
-        description: 'Working as an insurancebroker for Volksfürsorge Vertriebs AG and Self-employed',
-        icon: GraduationCap,
-      },
-      {
-        role: 'CS50\'s Introduction to Computer Science',
-        company: 'Harvard University',
-        period: '2010 - 2010',
-        description: 'A broad and robust understanding of computer science and programming, algorithms, data structures, and web development.',
-        icon: GraduationCap,
-      },
-      {
-        role: 'CS50\'s Web Programming with Python and JavaScript',
-        company: 'Harvard University',
-        period: '2011 - 2011',
-        description: 'Diving more deeply into the design and implementation of web apps with Python, JavaScript, and SQL using frameworks like Django, React, and Bootstrap.',
-        icon: GraduationCap,
-      },
-      {
-        role: 'CS50\'s Computer Science for Business Professionals',
-        company: 'Harvard University',
-        period: '2012 - 2012',
-        description: 'Introduced to computer science for business professionals, covering computational thinking, internet technologies, and cloud computing.',
-        icon: GraduationCap,
-      },
-      {
-        role: 'Master Kybernetiker',
-        company: 'Beyreuther Akademie',
-        period: '2017 - 2018',
-        description: 'Ranked top 10% in the program. Learned Sales with a straight system.',
-        icon: GraduationCap,
-      },
-      {
-        role: 'Responsive Webdesign, Algorithms & Data Structure',
-        company: 'School Of Coding - Oklahoma',
-        period: '2017 - 2018',
-        description: 'Developer Certification, representing approximately 600 hours of coursework in HTML, CSS, Git, Python, Django, SQL, and JavaScript.',
-        icon: GraduationCap,
-      },
-  ];
+  export const educationInfo:any[] = [];
   
   export const workExperiences = [
-      {
-        role: 'Full-Stack Development',
-        company: 'Project Based',
-        period: '2020 - Present',
-        description: 'Delivered quality commercial websites that met coding standards and cross-browser compatibilities. TechStack: ReactJS, REST, WordPress, GraphQL.',
-        icon: Briefcase,
-      },
-      {
-        role: 'Sales Representative Online',
-        company: 'Telekom',
-        period: '2020 - 2020',
-        description: 'Met frequently with technical, product management and service personnel to stay current on company offerings and business policies.',
-        icon: Briefcase,
-      },
-      {
-        role: 'Full-Stack Development',
-        company: 'Project Based',
-        period: '2018 - 2020',
-        description: 'Delivered quality commercial websites that met coding standards and cross-browser compatibilities. Custom building applications and backends.',
-        icon: Briefcase,
-      },
-      {
-        role: 'Self-Employed Full-Stack',
-        company: '4 U Assekuranzmakler',
-        period: '2012 - 2017',
-        description: 'Designed, developed and implemented software applications for website based on analyzed requirements. TechStack: AngularJS, REST, Salesforce.',
-        icon: Briefcase,
-      }
+    {
+      role: 'DevOps & Backend Engineer',
+      company: 'Bundesdruckerei GmbH, Berlin',
+      period: '2024-02 - Current',
+      description: 'Taking initiative to build a new AWS-based infrastructure from the ground up, leveraging Terraform, Docker, Helm, and Kubernetes (OpenShift) to support scalable and secure deployments. Built and released an AI coding assistant (similar to GitHub Copilot) for VSCode and JetBrains, including model orchestration, extension APIs, and telemetry pipelines.',
+      icon: Briefcase,
+    },
+    {
+      role: 'Full-Stack Developer',
+      company: 'RTL Technology GmbH, Berlin',
+      period: '2021-09 - 2024-01',
+      description: 'Started in the HbbTV Team working in the Frontend with React and in the Backend with NodeJS Services as well as NestJS as a Framework. Switched the Team to developing as a Backend Dev for the Music Service for at least one year. Coordinated efficient large-scale software deployments and tested and deployed scalable and highly available software products.',
+      icon: Briefcase,
+    },
+    {
+      role: 'Full-Stack Developer',
+      company: 'Freelancer, different projects and companies',
+      period: '2020-10 - 2021-09',
+      description: 'Delivered quality commercial websites that met coding standards and cross-browser compatibilities in many projects that lasted for 3 to 6 months. Developed and maintained microservices architectures using Docker and Kubernetes.',
+      icon: Briefcase,
+    },
+    {
+      role: 'Online Marketing, Frontend Developer',
+      company: 'Telekom, Berlin',
+      period: '2020-05 - 2020-09',
+      description: 'Met frequently with technical, product management, and service personnel to stay current on company offerings and business policies. Working on specific Customer Projects to integrate custom In-App Ads.',
+      icon: Briefcase,
+    },
+    {
+      role: 'Full-Stack Developer',
+      company: 'Freelancer, different projects and companies',
+      period: '2018-04 - 2020-02',
+      description: 'Liaised with rebranding experts to optimize websites for increased conversion rates. Maintained complex technology infrastructure and collaborated with the product team to implement new features and strategically plan for future products.',
+      icon: Briefcase,
+    },
+    {
+      role: 'Business Owner (Full-Stack Dev)',
+      company: 'Self-Employed, Uelzen',
+      period: '2012-01 - 2017-12',
+      description: 'Performed development, debugging, optimization, and automation to support the implementation of products and applications. Identified, hired, and trained highly qualified staff by teaching best practices, procedures, and sales strategies.',
+      icon: Briefcase,
+    }
   ];
   
   export const bigProjects = [
