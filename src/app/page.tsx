@@ -79,7 +79,7 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl items-start gap-12 lg:grid-cols-3">
               <div className="lg:col-span-1 flex flex-col items-center text-center lg:items-start lg:text-left">
                 <Image
-                  src="../img/profile-picture.jpeg"
+                  src="/img/profile-picture.jpeg"
                   alt={greeting.username}
                   width={200}
                   height={200}

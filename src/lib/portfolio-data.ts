@@ -76,7 +76,7 @@ export const greeting = {
     {
       title: 'Google Search Clone',
       description: 'Created a Google Search Clone with React, Next.js, TailwindCSS and Heroicicons. Just simply Search with the Google Search API',
-      image: "../googleClone.png",
+      image: "/img/googleClone.png",
       aiHint: "search engine interface",
       tags: ["Next.js", "React", "Tailwind CSS"],
       github: "#",
@@ -85,7 +85,7 @@ export const greeting = {
     {
       title: 'Facebook Clone',
       description: 'Created a Facebook Clone with React, Firebase, Firebase Log-In with Google Acc. uploading Images and MaterialUI.',
-      image: "../img/facebookClone.png",
+      image: "/img/facebookClone.png",
       aiHint: "social media feed",
       tags: ["React", "Firebase", "Material-UI"],
       github: "#",
@@ -94,7 +94,7 @@ export const greeting = {
     {
       title: 'TikTok Clone',
       description: 'Under Construction - Created a TikTok Clone with React, Firebase and MaterialUI. Under Construction',
-      image: "../img/tiktokClone.png",
+      image: "/img/tiktokClone.png",
       aiHint: "mobile video app",
       tags: ["React", "Firebase", "Material-UI"],
       github: "#",
