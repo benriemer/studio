@@ -13,7 +13,7 @@ export const greeting = {
   export const socialMediaLinks = {
     github: 'https://github.com/benriemer',
     linkedin: "https://www.linkedin.com/in/benjamin-riemer-783431127/",
-    gmail: 'benjamin@riemer-berlin.de',
+    gmail: 'riemer600@gmail.com',
     facebook: "https://www.facebook.com/benjamin.riemer.9480/",
   };
   
@@ -21,8 +21,8 @@ export const greeting = {
 
   export const skillsData = [
       '⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications',
-      '⚡ Build and release AI coding assistants for VSCode and JetBrains',
-      '⚡ Design and implement fully automated CI/CD pipelines using GitLab'
+      '⚡ Builded and release AI coding assistants for VSCode and JetBrains',
+      '⚡ Design and implemented Backend Archtictures with Databsemodel Design'
   ];
   
   export const educationInfo:any[] = [];
@@ -80,7 +80,7 @@ export const greeting = {
       aiHint: "search engine interface",
       tags: ["Next.js", "React", "Tailwind CSS"],
       github: "#",
-      live: "https://google-clone-steel.vercel.app/",
+      live: "https://google-clone.benjamin-riemer.de/",
     },
     {
       title: 'Facebook Clone',
@@ -89,7 +89,7 @@ export const greeting = {
       aiHint: "social media feed",
       tags: ["React", "Firebase", "Material-UI"],
       github: "#",
-      live: "https://facebook-clone-two-sage.vercel.app/",
+      live: "https://facebook-clone.benjamin-riemer.de/",
     },
     {
       title: 'TikTok Clone',
@@ -98,7 +98,7 @@ export const greeting = {
       aiHint: "mobile video app",
       tags: ["React", "Firebase", "Material-UI"],
       github: "#",
-      live: "https://tiktok-clone-ten.vercel.app/",
+      live: "https://tiktok-clone.benjamin-riemer.de/",
     },
   ];
 
@@ -107,5 +107,5 @@ export const greeting = {
     subtitle:
       'Discuss a project or just want to say hi? My Inbox is open for all.',
     number: '+491567 869 29 57',
-    email_address: 'benjamin@riemer-berlin.de'
+    email_address: 'riemer600@gmail.com'
   }
